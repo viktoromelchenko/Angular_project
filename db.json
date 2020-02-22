@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "croissants": [
+    {
+      "id": 1,
+      "categoryName": "sendwitch",
+      "name": "Beef",
+      "ingredients": "круасан, яловичина, салат Айсберг, помідор, соус Цезар",
+      "price": 64
+    },
+    {
+      "id": 2,
+      "categoryName": "sendwitch",
+      "name": "Амстердам",
+      "ingredients": "круасан, оселедець, сир Моцарела, помідор, салат, соус Песто, соус Часниковий",
+      "price": 51
+    },
+    {
+      "id": 3,
+      "categoryName": "sendwitch",
+      "name": "Галицький",
+      "ingredients": "круасан, помідор, огірок, курка, гриби, салат, соус Гірчичний",
+      "price": 51
+    },
+    {
+      "id": 4,
+      "categoryName": "sendwitch",
+      "name": "Королівський",
+      "ingredients": "круасан, помідор, салат, сир Королівський, курка, соус Гірчичний",
+      "price": 89
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "sendwitch"
+    },
+    {
+      "id": 2,
+      "name": "sweet"
+    },
+    {
+      "id": 3,
+      "name": "drinks"
+    }
+  ]
+}

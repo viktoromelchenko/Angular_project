@@ -1,0 +1,71 @@
+<div class="main">
+    <div class="box"> 
+      <h3>Croissant</h3>
+      <button type="button" class="btn btn-primary" (click)="openModalWithClass(template)">Add Croissant</button>
+    </div>
+      <input type="text" class="form-control">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category</th>
+            <th scope="col">Name</th>
+            <th scope="col">Ingridients</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let croissant of croissantsAdmin; let i=index">
+            <th> {{ i+1 }}</th>
+            <th> {{ croissant.categoryName }} </th>
+            <th> {{ croissant.name }}</th>
+            <th> {{ croissant.ingredients }}</th>
+            <th> {{ croissant.price }}</th>
+            <th> No image </th>
+            <th> <button type="button" class="btn btn-warning" (click)="editCroissant(croissant)">Edit</button> </th>
+            <th> <button type="button" class="btn btn-danger" [disabled]="editStatus" (click)="deleteCroissant(croissant)">Delete</button> </th>
+          </tr>
+        </tbody>
+        <tbody>
+        </tbody>
+      </table>
+      
+</div>
+
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Create Croissant</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <div class="category">
+        <h4>Category</h4>
+        <select class="custom-select" [(ngModel)]="category" name='category'>
+          <option *ngFor="let category of categoryAdmin">{{ category.name }}</option>
+        </select>
+      </div>
+      <div class="name">
+        <h4>Name</h4>
+        <input type="text" class="form-control" [(ngModel)]="NameCroissant" name="NameCroissant">
+      </div>
+      <div class="description">
+        <h4>Ingridients</h4>
+        <input type="text" class="form-control" [(ngModel)]="IngridientsCroissant" name="IngridientsCroissant">
+      </div>
+      <div class="price">
+        <h4>Price</h4>
+        <input type="number" class="form-control" [(ngModel)]="PriceCroissant" name="PriceCroissant" >
+      </div>
+      <div class="button">
+        <button type="button" class="btn btn-success" (click)="addCroissant()">add</button>
+        
+      </div>
+  </div>
+</ng-template>

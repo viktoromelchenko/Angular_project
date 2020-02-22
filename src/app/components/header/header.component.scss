@@ -1,0 +1,21 @@
+nav {
+    
+    background-image: url(/assets/images/5.jpg);
+    background-size: cover;
+    
+}
+.navbar-nav { 
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+span {
+    margin-left: 10px;
+}
+a{
+    color:lightseagreen;
+    &:hover{
+        color: red;
+        transition: 0.5s;
+    }
+}

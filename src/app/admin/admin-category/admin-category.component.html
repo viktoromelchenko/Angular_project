@@ -1,0 +1,39 @@
+<div class="main">
+    <div class="box"> 
+      <h3>Category</h3>
+      <button type="button" class="btn btn-primary" (click)="openModal(template)">Add category </button>
+    </div>
+      <input type="text" class="form-control" [(ngModel)]="cateorySearch">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categoryAdmin | search:cateorySearch; let i=index">
+            <th>{{ i+1 }}</th>
+            <th>{{ category.name }}</th>
+            <th> <button type="button" class="btn btn-warning" (click)="editCategory(category)">Edit</button> </th>
+            <th> <button type="button" class="btn btn-danger" [disabled]="editStatus" (click)="deleteCategory(category)" >Delete</button> </th>
+          </tr>
+        </tbody>
+      </table>
+      
+</div>
+ 
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Add Category </h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <input type="text" class="form-control" [(ngModel)]="category" name="category">
+    <button class="btn btn-success" (click)="addCategory()">add</button>
+  </div>
+</ng-template>

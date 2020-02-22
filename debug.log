@@ -1,0 +1,15 @@
+[0211/233443.538:ERROR:process_info.cc(359)] UncheckedAllocate
+[0213/184604.823:ERROR:process_info.cc(359)] UncheckedAllocate
+[0218/131553.604:ERROR:process_reader_win.cc(182)] ResumeThread: Параметр хибний. (0x57)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)

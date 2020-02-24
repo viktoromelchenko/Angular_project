@@ -1,8 +1,24 @@
+<div class="buttons">
+  <button (click)="sendwitchCroissants()" class="btn">sendwich croissant
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <button (click)="sweetCroissants()" class="btn">sweet croissant
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+
+
 <div class="main">
   <div class="card" *ngFor="let croissant of croissants ">
     <div class="content">
       <div class="price">{{ croissant.price | currency:'$' }}</div>
-      <img src="https://www.lviv-croissants.com/wp-content/uploads/2019/07/Filadelfiya-z-Ovochamy.png" alt="">
+      <img [routerLink]="[ '/croissant', croissant.id ]" src="https://www.lviv-croissants.com/wp-content/uploads/2019/07/Filadelfiya-z-Ovochamy.png" alt="">
       <h3>{{ croissant.name | uppercase }}</h3>
       <p class="ingredients">{{ croissant.ingredients }}</p>
     </div>

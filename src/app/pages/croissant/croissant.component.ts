@@ -10,22 +10,41 @@ import { ICroissant } from 'src/app/shared/interface/croissant.interface';
 export class CroissantComponent implements OnInit {
 
   croissants: Array<ICroissant> = [];
+  croissantStatus:boolean = true;
 
   constructor(private crs: CroissantService) { }
 
   ngOnInit() {
-    this.getCroissants()
+    this.sendwitchCroissants()
   }
 
 
-  private getCroissants(): void {
-    this.crs.getJSONCroissants().subscribe(
-      data => {
-        this.croissants = data;
-      },
-      err => {
-        console.log(err)
-      }
+  sendwitchCroissants(): void {
+  if(this.croissantStatus){
+  this.crs.getJSONCroissants().subscribe(
+    data => {
+      this.croissants = data.filter(croissant => croissant.categoryName === 'sendwitch');
+    },
+    err => {
+      console.log(err)
+    }
     );
+    }
+    this.croissantStatus = false;
   }
+
+  sweetCroissants():void{
+  if (!this.croissantStatus){
+      this.crs.getJSONCroissants().subscribe(
+        data => {
+          this.croissants = data.filter(croissant => croissant.categoryName === 'sweet');
+        },
+        err => {
+          console.log(err)
+        }
+        );
+    }
+    this.croissantStatus = true;
+  }
+
 }

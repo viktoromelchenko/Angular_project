@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import {AgmCoreModule} from '@agm/core'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -45,7 +46,11 @@ import { SearchPipe } from './shared/pipes/search.pipe';
     CarouselModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD3Zz_Ef6gIKNdOjm0c3reXM-08uoNVtAg'
+      
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

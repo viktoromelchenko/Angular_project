@@ -13,3 +13,6 @@
 [0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
 [0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
 [0218/131553.629:ERROR:process_reader_win.cc(151)] SuspendThread: Немає дозволу на доступ. (0x5)
+[0224/144445.327:ERROR:process_info.cc(359)] UncheckedAllocate
+[0224/144445.335:ERROR:process_info.cc(359)] UncheckedAllocate
+[0224/150818.428:ERROR:process_info.cc(359)] UncheckedAllocate

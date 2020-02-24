@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'croissant', component: CroissantComponent},
   {path: 'drinks', component: DrinksComponent},
   {path: 'basket', component: BasketComponent},
-  {path: 'product-detalis', component: ProductDetalisComponent },
+  {path: 'croissant/:id', component: ProductDetalisComponent },
   {path: 'admin', component: AdminComponent, children:[
     {path: ' ' , redirectTo:'admin-category',pathMatch: 'full'},
     {path: 'admin-category', component: AdminCategoryComponent},

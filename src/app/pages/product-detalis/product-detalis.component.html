@@ -1,1 +1,8 @@
-<p>product-detalis works!</p>
+<div class="card">
+    <div class="content">
+      <div class="price">{{ view?.price | currency:'$' }}</div>
+      <img  src="https://www.lviv-croissants.com/wp-content/uploads/2019/07/Filadelfiya-z-Ovochamy.png" alt="">
+      <h3>{{ view?.name | uppercase }}</h3>
+      <p class="ingredients">{{ view?.ingredients }}</p>
+    </div>
+  </div>

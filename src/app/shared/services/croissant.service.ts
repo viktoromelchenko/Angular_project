@@ -45,4 +45,8 @@ export class CroissantService {
     return this.http.put<Array<ICroissant>>(`${this.url}/${croissant.id}`,croissant );
   }
 
+  getJSONOneCroissant(id:number): Observable<ICroissant>{
+    return this.http.get<ICroissant>(`${this.url}/${id}`);
+  }
+
 }

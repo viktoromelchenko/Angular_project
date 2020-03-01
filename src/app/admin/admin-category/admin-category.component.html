@@ -17,7 +17,7 @@
           <tr *ngFor="let category of categoryAdmin | search:cateorySearch; let i=index">
             <th>{{ i+1 }}</th>
             <th>{{ category.name }}</th>
-            <th> <button type="button" class="btn btn-warning" (click)="editCategory(category)">Edit</button> </th>
+            <th> <button type="button" class="btn btn-warning" (click)="editCategory(category,template)">Edit</button> </th>
             <th> <button type="button" class="btn btn-danger" [disabled]="editStatus" (click)="deleteCategory(category)" >Delete</button> </th>
           </tr>
         </tbody>

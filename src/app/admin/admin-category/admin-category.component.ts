@@ -76,10 +76,12 @@ export class AdminCategoryComponent implements OnInit {
     );
   }
 
-  editCategory(category: ICategory):void{
+  editCategory(category: ICategory,template):void{
     this.categoryID = category.id;
     this.category = category.name;
     this.editStatus = true
+
+    this.modalRef = this.modalService.show(template);
   }
 
   resetForm(): void{

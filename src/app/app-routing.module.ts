@@ -12,6 +12,7 @@ import { AdminCroissantComponent } from './admin/admin-croissant/admin-croissant
 
 
 const routes: Routes = [
+  {path: '', pathMatch:'full', redirectTo:'home'},
   {path: 'home', component: HomeComponent},
   {path: 'croissant', component: CroissantComponent},
   {path: 'drinks', component: DrinksComponent},

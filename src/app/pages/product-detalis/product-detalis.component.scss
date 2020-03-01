@@ -1,3 +1,15 @@
 img{
-    width: 300px;
+    width: 90%;
+}
+.box{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+    width: 50%;
+    }
+.info{
+    width: 50%;
 }

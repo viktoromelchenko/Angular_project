@@ -1,7 +1,7 @@
 <div class="main">
     <div class="box"> 
-      <h3>Croissant</h3>
-      <button type="button" class="btn btn-primary" (click)="openModalWithClass(template)">Add Croissant</button>
+      <h3>Drinks</h3>
+      <button type="button" class="btn btn-primary" (click)="openModalWithClass(template)">Add Drink</button>
     </div>
       <input type="text" class="form-control" [(ngModel)]="cateorySearch">
       <table class="table">
@@ -10,7 +10,7 @@
             <th scope="col">#</th>
             <th scope="col">Category</th>
             <th scope="col">Name</th>
-            <th scope="col">Ingridients</th>
+            <th scope="col">Description</th>
             <th scope="col">Price</th>
             <th scope="col">Image</th>
             <th scope="col">Edit</th>
@@ -18,15 +18,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let croissant of croissantsAdmin | search:cateorySearch; let i=index">
+          <tr *ngFor="let drink of AdminDrinks | search:cateorySearch; let i=index">
             <th> {{ i+1 }}</th>
-            <th> {{ croissant.categoryName }} </th>
-            <th> {{ croissant.name }}</th>
-            <th> {{ croissant.ingredients }}</th>
-            <th> {{ croissant.price }}</th>
-            <th class="image"> <img [src]="croissant.image" alt=""></th>
-            <th> <button type="button" class="btn btn-warning" (click)="editCroissant(croissant, template)">Edit</button> </th>
-            <th> <button type="button" class="btn btn-danger" [disabled]="editStatus" (click)="deleteCroissant(croissant)">Delete</button> </th>
+            <th> {{ drink.categoryName }} </th>
+            <th> {{ drink.name }}</th>
+            <th> {{ drink.description }}</th>
+            <th> {{ drink.price }}</th>
+            <th class="image"> <img [src]="drink.image" alt=""></th>
+            <th> <button type="button" class="btn btn-warning" (click)="editDrinks(drink,template)">Edit</button> </th>
+            <th> <button type="button" class="btn btn-danger" [disabled]="editDrink" (click)="deleteDrink(drink)">Delete</button> </th>
           </tr>
         </tbody>
         <tbody>
@@ -39,7 +39,7 @@
 
 <ng-template #template>
   <div class="modal-header">
-    <h4 class="modal-title pull-left">Create Croissant</h4>
+    <h4 class="modal-title pull-left">Create Drink</h4>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -53,15 +53,15 @@
       </div>
       <div class="name">
         <h4>Name</h4>
-        <input type="text" class="form-control" [(ngModel)]="NameCroissant" name="NameCroissant">
+        <input type="text" class="form-control" [(ngModel)]="NameDrink" name="NameDrink">
       </div>
       <div class="description">
-        <h4>Ingridients</h4>
-        <input type="text" class="form-control" [(ngModel)]="IngridientsCroissant" name="IngridientsCroissant">
+        <h4>Description</h4>
+        <input type="text" class="form-control" [(ngModel)]="DescriptionDrink" name="DescriptionDrink">
       </div>
       <div class="price">
         <h4>Price</h4>
-        <input type="number" class="form-control" [(ngModel)]="PriceCroissant" name="PriceCroissant" >
+        <input type="number" class="form-control" [(ngModel)]="PriceDrink" name="PriceDrink" >
       </div>
       <div class="form-group row">
         <div class="card-body">
@@ -85,7 +85,7 @@
         </div>
       </div>
       <div class="button">
-        <button type="button" class="btn btn-success" (click)="addCroissant()">add</button>
+        <button type="button" class="btn btn-success" (click)="addDrink()">add</button>
         
       </div>
   </div>

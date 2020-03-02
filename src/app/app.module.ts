@@ -27,8 +27,10 @@ import { ProductDetalisComponent } from './pages/product-detalis/product-detalis
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AdminCroissantComponent } from './admin/admin-croissant/admin-croissant.component';
 import { AdminCategoryComponent } from './admin/admin-category/admin-category.component';
+import { AdminDrinkComponent } from './admin/admin-drink/admin-drink.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SearchPipe } from './shared/pipes/search.pipe';
+
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { SearchPipe } from './shared/pipes/search.pipe';
     ProductDetalisComponent,
     AdminCroissantComponent,
     AdminCategoryComponent,
+    AdminDrinkComponent,
     SearchPipe,
+    AdminDrinkComponent,
 
   
   ],

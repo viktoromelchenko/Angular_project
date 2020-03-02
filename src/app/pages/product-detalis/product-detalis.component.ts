@@ -11,18 +11,14 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductDetalisComponent implements OnInit {
 
   view: ICroissant;
-  croissantsRandom: ICroissant;
-  croissantsRandom1: ICroissant;
-  croissantsRandom2: ICroissant;
+  
+
 
   constructor(private crs: CroissantService,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.getMyCroissant();
-    this.getRandom();
-    this.getRandom1();
-    this.getRandom2();
 
   }
 
@@ -32,33 +28,6 @@ export class ProductDetalisComponent implements OnInit {
     this.crs.getJSONOneCroissant(id).subscribe(
       data => {
         this.view = data;
-      }
-    )
-  }
-
-  getRandom():void {
-    const number = Math.random()*9;
-    this.crs.getJSONOneCroissant((Math.round(number))).subscribe(
-      data => {
-        this.croissantsRandom = data;
-      }
-    )
-  }
-
-  getRandom1():void {
-    const number = Math.random()*9;
-    this.crs.getJSONOneCroissant((Math.round(number))).subscribe(
-      data => {
-        this.croissantsRandom1 = data;
-      }
-    )
-  }
-
-  getRandom2():void {
-    const number = Math.random()*9;
-    this.crs.getJSONOneCroissant((Math.round(number))).subscribe(
-      data => {
-        this.croissantsRandom2 = data;
       }
     )
   }

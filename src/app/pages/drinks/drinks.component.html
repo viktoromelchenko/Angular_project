@@ -1,1 +1,10 @@
-<p>drinks works!</p>
+<div class="main">
+    <div class="box" *ngFor="let drink of Drinks">
+        <span class="price">{{ drink.price }}</span>
+        <img [src]="drink.image" alt="">
+        <p class="name">{{ drink.name }}</p>
+        <span class="button"> 
+            <button class="btn btn-success">Add to Basket</button>
+        </span>
+    </div>
+</div>

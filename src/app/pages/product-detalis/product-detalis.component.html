@@ -1,27 +1,13 @@
 <div class="box">
   <div class="image">
-    <img src="https://www.lviv-croissants.com/wp-content/uploads/2019/07/Filadelfiya-z-Ovochamy.png" alt="">
+    <img [src]="view?.image" alt="">
   </div>
   <div class="info">
-    <h3>{{ view?.price}}</h3>
-    <h3>{{ view?.name}}</h3>
-    <h3>{{ view?.ingredients }}</h3>
+    <h3>Ціна: {{ view?.price}}</h3>
+    <h3>Інгрідієнти : {{ view?.ingredients }}</h3>
   </div>
+  <button class="btn btn-success">Buy Croissant</button>
 </div>
-<div>
-  <h3>{{ croissantsRandom?.price}}</h3>
-    <h3>{{ croissantsRandom?.name}}</h3>
-    <h3>{{ croissantsRandom?.ingredients }}</h3>
-</div>
-<div>
-  <h3>{{ croissantsRandom1?.price}}</h3>
-    <h3>{{ croissantsRandom1?.name}}</h3>
-    <h3>{{ croissantsRandom1?.ingredients }}</h3>
-</div>
-<div>
-  <h3>{{ croissantsRandom2?.price }}</h3>
-    <h3>{{ croissantsRandom2?.name }}</h3>
-    <h3>{{ croissantsRandom2?.ingredients }}</h3>
-</div>
+
 
 

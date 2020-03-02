@@ -9,6 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 import { YourCroissantComponent } from './pages/your-croissant/your-croissant.component';
 import { AdminCategoryComponent } from './admin/admin-category/admin-category.component';
 import { AdminCroissantComponent } from './admin/admin-croissant/admin-croissant.component';
+import { AdminDrinkComponent } from './admin/admin-drink/admin-drink.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'admin', component: AdminComponent, children:[
     {path: ' ' , redirectTo:'admin-category',pathMatch: 'full'},
     {path: 'admin-category', component: AdminCategoryComponent},
-    {path: 'admin-croissant', component: AdminCroissantComponent}
+    {path: 'admin-croissant', component: AdminCroissantComponent},
+    {path: 'admin-drink', component: AdminDrinkComponent}
   ]},
   {path: 'your-croissant', component: YourCroissantComponent}
 

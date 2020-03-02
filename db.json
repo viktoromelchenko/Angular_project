@@ -202,6 +202,108 @@
     {
       "id": 2,
       "name": "sweet"
+    },
+    {
+      "id": 3,
+      "name": "drink"
+    }
+  ],
+  "drinks": [
+    {
+      "id": 1,
+      "categoryName": "drink",
+      "name": "Фрапе",
+      "description": "-",
+      "price": 32,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2Ff499fda5-6adb-46a6-8f20-4ad3fe01f615.png?alt=media&token=933730a0-3020-47c4-931b-1fcef7c02355"
+    },
+    {
+      "id": 2,
+      "categoryName": "drink",
+      "name": "Айс Кофі",
+      "description": "-",
+      "price": 32,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2Fb7f44641-bd9e-4107-bac8-e01d920f2e17.png?alt=media&token=fd5e1d71-34b7-45a0-88e6-375cfd57e3ca"
+    },
+    {
+      "id": 3,
+      "categoryName": "drink",
+      "name": "Айс Лате",
+      "description": "-",
+      "price": 32,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2Fc83ab994-de79-46e0-87db-44ed936a5a27.png?alt=media&token=541598b4-8fa9-4642-aef8-ecb55f9a96a1"
+    },
+    {
+      "id": 4,
+      "categoryName": "drink",
+      "name": "Лимонад “Манго – Маракуйя”",
+      "description": "-",
+      "price": 30,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2F5a947003-570b-469c-affd-c0e6676eaa21.png?alt=media&token=b33e432d-af55-4d4e-ae17-9cc096b9fe13"
+    },
+    {
+      "id": 5,
+      "categoryName": "drink",
+      "name": "Лимонад класичний",
+      "description": "-",
+      "price": 30,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2F387acb47-2bfa-45b4-8c47-ad6abad28b1b.png?alt=media&token=81accfce-24f8-4292-a483-665ce54a902f"
+    },
+    {
+      "id": 6,
+      "categoryName": "drink",
+      "name": "Лимонад “Полуничний”",
+      "description": "-",
+      "price": 30,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2F55500823-6dad-4a06-80db-246220d02f0a.png?alt=media&token=11cd26cb-3a71-486f-9873-8da3c21cbdce"
+    },
+    {
+      "id": 7,
+      "categoryName": "drink",
+      "name": "Лимонад “Диня – Ананас”",
+      "description": "-",
+      "price": 30,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2Fa6ccd58d-61be-4e75-a852-88b6daec5a60.png?alt=media&token=e01ebb8c-819f-4db4-b51e-3ee52da7bf4c"
+    },
+    {
+      "id": 8,
+      "categoryName": "drink",
+      "name": "Лимонад “Ківі – Бузина”",
+      "description": "-",
+      "price": 30,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2Ffdcda134-3854-4187-be32-5edf3e963145.png?alt=media&token=bfa67dbd-8497-48af-a236-07912d5319df"
+    },
+    {
+      "id": 9,
+      "categoryName": "drink",
+      "name": "Вода з м’ятою та лимоном",
+      "description": "-",
+      "price": 30,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2Fd7f69e27-259a-4e8b-974e-ccd8fec9869c.png?alt=media&token=419d3536-1d76-478a-9446-51bf9afc64e5"
+    },
+    {
+      "id": 10,
+      "categoryName": "drink",
+      "name": "Крем – Лате “Орео”",
+      "description": "-",
+      "price": 37,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2Fa7095cea-2633-4593-92d7-5f0e8d83bea4.png?alt=media&token=69549df9-1c68-4acb-bb36-17bb0c2949df"
+    },
+    {
+      "id": 11,
+      "categoryName": "drink",
+      "name": "Крем – Лате “Солона карамель”",
+      "description": "-",
+      "price": 27,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2F391a1db4-1a5b-464e-836d-a11cd5d5c728.png?alt=media&token=b01f60dd-a7a5-4e9c-84ab-3b4c7e78c5b2"
+    },
+    {
+      "id": 12,
+      "categoryName": "drink",
+      "name": "Крем – Лате “Снікерс”",
+      "description": "-",
+      "price": 27,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2F2f4a6dfa-7149-43b0-b719-b2151c31be0a.png?alt=media&token=338bea77-679a-459c-adb5-a79886c9b92d"
     }
   ]
 }

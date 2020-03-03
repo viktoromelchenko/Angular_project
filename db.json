@@ -206,6 +206,10 @@
     {
       "id": 3,
       "name": "drink"
+    },
+    {
+      "id": 4,
+      "name": "ingridient"
     }
   ],
   "drinks": [
@@ -304,6 +308,22 @@
       "description": "-",
       "price": 27,
       "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2F2f4a6dfa-7149-43b0-b719-b2151c31be0a.png?alt=media&token=338bea77-679a-459c-adb5-a79886c9b92d"
+    }
+  ],
+  "ingridients": [
+    {
+      "id": 1,
+      "categoryName": "ingridient",
+      "name": "Сир твердий",
+      "price": 9,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2Ff1eb1de3-a791-4966-a7f5-97d82ea923c3.png?alt=media&token=1b852257-783b-421c-9841-b0904ee0dc39"
+    },
+    {
+      "id": 2,
+      "categoryName": "ingridient",
+      "name": "Сир Королівський",
+      "price": 17,
+      "image": "https://firebasestorage.googleapis.com/v0/b/croissants-16ec4.appspot.com/o/Images%2F7b85af3e-729f-474d-a412-1c1622ed8aab.png?alt=media&token=c40ea7d3-b32d-4750-82bc-cccdd30551d6"
     }
   ]
 }

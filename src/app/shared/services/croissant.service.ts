@@ -9,16 +9,7 @@ import { Observable } from 'rxjs';
 export class CroissantService {
   
 
-  croissants: Array<ICroissant> = [
-    {
-      id: 1,
-      categoryName: "sandwich",
-      name: "Beef",
-      ingredients: 'ssssss',
-      price: 59
-
-    }
-  ];
+  croissants: Array<ICroissant> = [];
   private url: string;
   
   constructor(private http: HttpClient) {

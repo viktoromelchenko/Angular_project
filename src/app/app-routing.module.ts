@@ -10,6 +10,7 @@ import { YourCroissantComponent } from './pages/your-croissant/your-croissant.co
 import { AdminCategoryComponent } from './admin/admin-category/admin-category.component';
 import { AdminCroissantComponent } from './admin/admin-croissant/admin-croissant.component';
 import { AdminDrinkComponent } from './admin/admin-drink/admin-drink.component';
+import { AdminIngridientsComponent } from './admin/admin-ingridients/admin-ingridients.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
     {path: ' ' , redirectTo:'admin-category',pathMatch: 'full'},
     {path: 'admin-category', component: AdminCategoryComponent},
     {path: 'admin-croissant', component: AdminCroissantComponent},
-    {path: 'admin-drink', component: AdminDrinkComponent}
+    {path: 'admin-drink', component: AdminDrinkComponent},
+    {path: 'admin-ingridients', component: AdminIngridientsComponent}
   ]},
   {path: 'your-croissant', component: YourCroissantComponent}
 

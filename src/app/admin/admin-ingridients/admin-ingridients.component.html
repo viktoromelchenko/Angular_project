@@ -1,0 +1,86 @@
+<div class="main">
+    <div class="box"> 
+      <h3>Ingridients</h3>
+      <button type="button" class="btn btn-primary" (click)="openModalWithClass(template)">Add Ingridients</button>
+    </div>
+      <input type="text" class="form-control" [(ngModel)]="cateorySearch">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ingridient of ingridientsAdmin | search:cateorySearch; let i=index">
+            <th> {{ i+1 }}</th>
+            <th> {{ ingridient.categoryName }} </th>
+            <th> {{ ingridient.name }}</th>
+            <th> {{ ingridient.price }}</th>
+            <th class="image"> <img [src]="ingridient.image" alt=""></th>
+            <th> <button type="button" class="btn btn-warning" (click)="editIngridient(ingridient, template)">Edit</button> </th>
+            <th> <button type="button" class="btn btn-danger" [disabled]="editStatus" (click)="deleteIngridient(ingridient)">Delete</button> </th>
+          </tr>
+        </tbody>
+        <tbody>
+        </tbody>
+      </table>
+      
+</div>
+
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Create Croissant</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+      <div class="category">
+        <h4>Category</h4>
+        <select class="custom-select" [(ngModel)]="category" name='category'>
+          <option *ngFor="let category of categoryAdmin">{{ category.name }}</option>
+        </select>
+      </div>
+      <div class="name">
+        <h4>Name</h4>
+        <input type="text" class="form-control" [(ngModel)]="NameIngridients" name="NameIngridients">
+      </div>
+      <div class="price">
+        <h4>Price</h4>
+        <input type="number" class="form-control" [(ngModel)]="PriceIngridients" name="PriceIngridients" >
+      </div>
+      <div class="form-group row">
+        <div class="card-body">
+          <h5 class="card-title">Select a file for upload:</h5>
+          <!-- <input type="file" (change)="upload($event)" accept=".png,.jpg" /> -->
+          <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+          <br><br>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadProgress | async) + '%'" [attr.aria-valuenow]="(uploadProgress | async)" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <br>
+          <div *ngIf="downloadURL | async; let downloadSrc" class="alert alert-info" role="alert">
+              File uploaded: <a [href]="downloadSrc">{{downloadSrc}}</a>
+          </div>
+          <br>
+          <div class="btn-group" role="group" *ngIf="uploadState | async; let state">
+              <button type="button" class="btn btn-primary" (click)="task.pause()" [disabled]="state === 'paused'">Pause</button>
+              <button type="button" class="btn btn-primary" (click)="task.cancel()" [disabled]="!(state === 'paused' || state === 'running')">Cancel</button>
+              <button type="button" class="btn btn-primary" (click)="task.resume()" [disabled]="state === 'running'">Resume</button>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button type="button" class="btn btn-success" (click)="addIngridients()">add</button>
+        
+      </div>
+  </div>
+</ng-template>

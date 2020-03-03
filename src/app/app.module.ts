@@ -30,6 +30,8 @@ import { AdminCategoryComponent } from './admin/admin-category/admin-category.co
 import { AdminDrinkComponent } from './admin/admin-drink/admin-drink.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SearchPipe } from './shared/pipes/search.pipe';
+import { SortableModule } from 'ngx-bootstrap/sortable';
+import { AdminIngridientsComponent } from './admin/admin-ingridients/admin-ingridients.component';
 
 
 
@@ -50,6 +52,7 @@ import { SearchPipe } from './shared/pipes/search.pipe';
     AdminDrinkComponent,
     SearchPipe,
     AdminDrinkComponent,
+    AdminIngridientsComponent,
 
   
   ],
@@ -67,7 +70,7 @@ import { SearchPipe } from './shared/pipes/search.pipe';
     AngularFireAnalyticsModule, // dynamically imports firebase/analytics
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, SortableModule.forRoot() // imports firebase/storage only needed for storage features
   ],
   providers: [],
   bootstrap: [AppComponent]

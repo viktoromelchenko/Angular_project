@@ -32,6 +32,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { SearchPipe } from './shared/pipes/search.pipe';
 import { SortableModule } from 'ngx-bootstrap/sortable';
 import { AdminIngridientsComponent } from './admin/admin-ingridients/admin-ingridients.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop'
+
 
 
 
@@ -70,7 +73,10 @@ import { AdminIngridientsComponent } from './admin/admin-ingridients/admin-ingri
     AngularFireAnalyticsModule, // dynamically imports firebase/analytics
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule, SortableModule.forRoot() // imports firebase/storage only needed for storage features
+    AngularFireStorageModule,// imports firebase/storage only needed for storage features
+     SortableModule.forRoot(),
+     BrowserAnimationsModule,
+     DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,22 +12,9 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 export class YourCroissantComponent implements OnInit {
 
   ingridients: Array<IIngridient> = [];
- 
+  sum: number = 0;
 
   done: Array<IIngridient> = [];
-
-  drop(event: CdkDragDrop<string[]>) {
-    if (event.previousContainer === event.container) {
-      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-    } else {
-      transferArrayItem(event.previousContainer.data,
-                        event.container.data,
-                        event.previousIndex,
-                        event.currentIndex);
-    }
-  }
-
-
 
   constructor(private ingridientsService: IngridientsService) { }
 
@@ -45,4 +32,25 @@ export class YourCroissantComponent implements OnInit {
       }
       );
   }
+
+
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+                        event.container.data,
+                        event.previousIndex,
+                        event.currentIndex);
+      console.log(event.container.data);
+      this.sumElem(event.container.data);
+    }
+  }
+
+   sumElem(data: Array<any>){
+     this.sum = data.reduce((total, elem) => {
+       return total+elem.price
+     }, 0)
+   }
 }

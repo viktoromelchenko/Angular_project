@@ -25,4 +25,10 @@
     (cdkDropListDropped)="drop($event)">
     <div class="example-box" *ngFor="let ingridient of done" cdkDrag><img [src]="ingridient.image"><p>{{ingridient.name}}</p></div>
   </div>
+  <div *ngFor="let ingridient of done">{{ingridient.price}}</div>
+  <div>
+    <h1>Suma: {{sum}}</h1>
+  </div>
 </div>
+
+<img class="croissant" src="https://www.lviv-croissants.com/wp-content/uploads/2019/05/krua.png" alt="">

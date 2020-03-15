@@ -20,7 +20,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DrinksComponent } from './pages/drinks/drinks.component';
 import { YourCroissantComponent } from './pages/your-croissant/your-croissant.component';
-import { BasketComponent } from './pages/basket/basket.component';
 import { AdminComponent } from './admin/admin.component';
 import { CroissantComponent } from './pages/croissant/croissant.component';
 import { ProductDetalisComponent } from './pages/product-detalis/product-detalis.component';
@@ -46,7 +45,6 @@ import {DragDropModule} from '@angular/cdk/drag-drop'
     HomeComponent,
     DrinksComponent,
     YourCroissantComponent,
-    BasketComponent,
     AdminComponent,
     CroissantComponent,
     ProductDetalisComponent,

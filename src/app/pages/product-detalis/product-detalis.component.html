@@ -6,7 +6,7 @@
     <h3>Ціна: {{ view?.price}}</h3>
     <h3>Інгрідієнти : {{ view?.ingredients }}</h3>
   </div>
-  <button class="btn btn-success">Buy Croissant</button>
+  <button class="btn btn-success" (click)="addBasket(view)">Buy Croissant</button>
 </div>
 
 

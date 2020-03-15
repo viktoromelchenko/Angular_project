@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DrinkService } from 'src/app/shared/services/drinks/drink.service';
 import { IDrink } from 'src/app/shared/interface/drink.interface';
+import { BasketService } from 'src/app/shared/services/basket/basket.service';
 
 @Component({
   selector: 'app-drinks',
@@ -11,8 +12,10 @@ export class DrinksComponent implements OnInit {
 
 
   Drinks: Array<IDrink> = [];
+  arrBasket: Array<any> = [];
 
-  constructor( private drinkService: DrinkService) { }
+  constructor( private drinkService: DrinkService,
+               private basketService: BasketService) { }
 
   ngOnInit() {
     this.getDrinks();
@@ -28,6 +31,12 @@ export class DrinksComponent implements OnInit {
       }
     );
   }
+
+
+  addBasket(drink:IDrink):void{
+    this.basketService.basket.next(drink);
+  }
+
 
 
 }

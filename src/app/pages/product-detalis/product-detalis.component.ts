@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ICroissant } from 'src/app/shared/interface/croissant.interface';
 import { CroissantService } from 'src/app/shared/services/croissant.service';
 import { ActivatedRoute } from '@angular/router';
+import { BasketService } from 'src/app/shared/services/basket/basket.service';
 
 @Component({
   selector: 'app-product-detalis',
@@ -15,11 +16,16 @@ export class ProductDetalisComponent implements OnInit {
 
 
   constructor(private crs: CroissantService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute, 
+              private basketService: BasketService) { }
 
   ngOnInit() {
     this.getMyCroissant();
 
+  }
+
+  addBasket(view: ICroissant){
+    this.basketService.basket.next(view);
   }
 
 
